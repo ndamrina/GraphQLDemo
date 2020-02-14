@@ -1,0 +1,33 @@
+type Query {
+    getAllFlights: [Flight!]!
+    getFlightById(id: ID!): Flight
+}
+
+type Mutation {
+    createFlight(title: String!, to: City!, from: City!): Flight!
+}
+
+type Flight {
+    id: ID!
+    title: String!
+    dateTime: DateTime!
+    to: City!
+    from: City!
+    passengers: [Person!]
+}
+
+type Person {
+    id: ID!
+    first: String!
+    last: String!
+    birthday: Date!
+}
+
+enum City {
+    NEW_YORK
+    WUTAN
+}
+
+scalar Date
+scalar NonNegativeFloat
+scalar DateTime
