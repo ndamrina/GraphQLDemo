@@ -1,4 +1,4 @@
-# Book details example 
+# GraphQL example 
 
 
 This project is modified version of "Getting started with GraphQL Java and Spring Boot" which 
